@@ -3,9 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "react-scripts": "2.1.1"
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.5",
+    "@types/react": "^16.7.2",
+    "@types/react-dom": "^16.0.9",
+    "node-sass": "^4.9.4",
+    "react-scripts": "2.1.1",
+    "typescript": "^3.1.6"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   },

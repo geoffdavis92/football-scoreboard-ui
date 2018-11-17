@@ -1,0 +1,25 @@
+
+// Team stuff
+@function getTeam($team-name)
+	@return map-get($TEAM-THEMES,$team-name)
+
+@function getBgColor($theme)
+	@return map-get($theme,map-get($theme,"bgColor"))
+
+@function getTxtColor($theme)
+	@return map-get($theme,map-get($theme,"txtColor"))
+
+=generateTeamModifiers($theme)
+	@each $team-name in $TEAMS
+		$theme: getTeam($team-name)
+		&--#{$team-name}
+			@content
+
+// Timeouts
+@function generateTimeoutsBackground($num)
+	//background: -webkit-linear-gradient(left, #000 1%, #fff 1%, #fff 32%, #000 32%, #000 33%, #fff 33%, #fff 65%, #000 65%, #000 66%, #fff 66%, #fff 99%, #000 99%)
+
+
+// Typography	
+=font-family($style: 'sans')
+	font-family: map-get($font-families, $style)

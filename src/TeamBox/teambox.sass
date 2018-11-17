@@ -1,0 +1,87 @@
+@import "../utils/sass/index"
+$theme: ''
+.team-box
+	// display: flex
+	font-size: 18px
+	font-weight: 500
+	width: 25%
+.team-box__name	
+	display: inline-block
+	line-height: 1
+	padding: 1rem 1.5rem
+	width: calc(75% - 3rem)
+	@each $team-name in $TEAMS
+		$theme: getTeam($team-name)
+		&--#{$team-name}
+			background-color: getBgColor($theme)
+			color: getTxtColor($theme)
+.team-box__name-inner-container
+	display: flex
+	font-size: inherit
+	justify-content: space-between
+	margin: 0
+.team-box__score
+	// align-items: center
+	// display: flex
+	// justify-content: center
+	display: inline-block
+	line-height: 1
+	padding: 1rem
+	text-align: center
+	width: calc(25% - 2rem)	
+	@each $team-name in $TEAMS
+		$theme: getTeam($team-name)
+		&--#{$team-name}
+			background-color: darken(getBgColor($theme),7.5)
+			color: getTxtColor($theme)
+.team-box__timeouts
+	display: block
+	height: .5rem
+	background-color: #000
+	width: 100%
+	position: relative
+	.timeout
+		background: #fff
+		display: inline-block
+		top: -112%
+		width: 24%
+		height: 50%
+		opacity: 1
+		position: relative
+		margin: 0 1px
+		left: .5%
+		transition: .66s opacity
+		&--show
+			opacity: 1
+		&--hide
+			opacity: 0
+
+
+
+	// &:before
+	// 	content: ""
+	// 	background: -webkit-linear-gradient(left, #000 1%, #fff 1%, #fff 32%, #000 32%, #000 33%, #fff 33%, #fff 65%, #000 65%, #000 66%, #fff 66%, #fff 99%, #000 99%)
+	// 	position: absolute
+	// 	top: 25%
+	// 	left: 0
+	// 	width: 75%
+	// 	height: 50%
+	// &:after
+	// 	content: ""
+	// 	background: #000
+	// 	position: absolute
+	// 	top: 25%
+	// 	right: 25%
+	// 	width: 0
+	// 	height: 50%
+	// 	z-index: 5
+	// 	transition: .66s all
+	// @each $num in (0,1,2,3)
+	// 	&--#{$num}
+	// 		$multiplier: 3 - $num
+	// 		$base-value: 25.5
+	// 		@if $num == 0
+	// 			$base-value: 25
+	// 		$width: ceil($multiplier * $base-value)
+	// 		&:after
+	// 			width: $width + %
