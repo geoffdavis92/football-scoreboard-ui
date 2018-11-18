@@ -34,7 +34,7 @@ $theme: ''
 		&--#{$team-name}
 			background-color: darken(getBgColor($theme),7.5)
 			color: getTxtColor($theme)
-.team-box__timeouts
+.team-box__bottom-bar
 	display: block
 	height: .5rem
 	background-color: #000
@@ -55,6 +55,26 @@ $theme: ''
 			opacity: 1
 		&--hide
 			opacity: 0
+	.possession-indicator 
+		background: #ecc600
+		height: 100%
+		opacity: 1
+		position: absolute
+		right: 0
+		top: 0
+		transition: .66s opacity
+		width: 25%
+	.possession-indicator--hide
+		opacity: 0
+
+.score
+	display: inline-block
+	transform: rotateY(0)
+	transition: .5s transform
+.score--rotate-half
+	transform: rotateY(-90deg)
+.score--rotate-full
+	transform: rotateY(0deg)
 
 
 

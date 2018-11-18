@@ -1,8 +1,8 @@
 import React from "react";
 import { TimeoutsRemaining } from "../utils/types";
 
-export default function Timeouts({ remaining }) {
-  const timeoutItems = new Array(3)
+export default function Timeouts({ children, remaining }) {
+  return new Array(3)
     .fill(0)
     .map((_, i) => (
       <span
@@ -12,12 +12,6 @@ export default function Timeouts({ remaining }) {
         }
       />
     ));
-  console.log(timeoutItems);
-  return (
-    <div className={`team-box__timeouts team-box__timeouts--${remaining}`}>
-      {timeoutItems}
-    </div>
-  );
 }
 
 Timeouts.propTypes = TimeoutsRemaining;
