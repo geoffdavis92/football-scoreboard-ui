@@ -2,6 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Container from "./Container";
 import TeamBox from "./TeamBox";
+import ClockBox from "./ClockBox";
+import DriveBox from "./DriveBox";
+
+import "./utils/sass/global.sass";
 
 const BEARS = {
   city: {
@@ -95,6 +99,8 @@ class App extends React.Component {
             timeoutsRemaining={this.state.timeoutsRemaining.team2}
             hasPossession={this.state.hasPossession === this.team2.name}
           />
+          <ClockBox />
+          <DriveBox />
         </Container>
         <br /><br />
         {[

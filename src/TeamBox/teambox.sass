@@ -4,7 +4,7 @@ $theme: ''
 	// display: flex
 	font-size: 18px
 	font-weight: 500
-	width: 25%
+	width: 30%
 .team-box__name	
 	display: inline-block
 	line-height: 1
@@ -50,19 +50,19 @@ $theme: ''
 		position: relative
 		margin: 0 1px
 		left: .5%
-		transition: .66s opacity
+		transition: .5s opacity
 		&--show
 			opacity: 1
 		&--hide
-			opacity: 0
+			opacity: .3
 	.possession-indicator 
-		background: #ecc600
+		background: $nfl-yellow
 		height: 100%
 		opacity: 1
 		position: absolute
 		right: 0
 		top: 0
-		transition: .66s opacity
+		transition: .5s opacity
 		width: 25%
 	.possession-indicator--hide
 		opacity: 0
@@ -75,33 +75,3 @@ $theme: ''
 	transform: rotateY(-90deg)
 .score--rotate-full
 	transform: rotateY(0deg)
-
-
-
-	// &:before
-	// 	content: ""
-	// 	background: -webkit-linear-gradient(left, #000 1%, #fff 1%, #fff 32%, #000 32%, #000 33%, #fff 33%, #fff 65%, #000 65%, #000 66%, #fff 66%, #fff 99%, #000 99%)
-	// 	position: absolute
-	// 	top: 25%
-	// 	left: 0
-	// 	width: 75%
-	// 	height: 50%
-	// &:after
-	// 	content: ""
-	// 	background: #000
-	// 	position: absolute
-	// 	top: 25%
-	// 	right: 25%
-	// 	width: 0
-	// 	height: 50%
-	// 	z-index: 5
-	// 	transition: .66s all
-	// @each $num in (0,1,2,3)
-	// 	&--#{$num}
-	// 		$multiplier: 3 - $num
-	// 		$base-value: 25.5
-	// 		@if $num == 0
-	// 			$base-value: 25
-	// 		$width: ceil($multiplier * $base-value)
-	// 		&:after
-	// 			width: $width + %
