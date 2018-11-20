@@ -25,7 +25,7 @@ export default class TeamBox extends React.Component {
           showRecord={showRecord}
           style="name"
         />
-        <Score name={name} value={score} />
+        <Score city={city} value={score} />
         <div className="team-box__bottom-bar">
           <Timeouts remaining={timeoutsRemaining} />
           <div

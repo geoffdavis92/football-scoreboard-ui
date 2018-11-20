@@ -15,7 +15,9 @@ export default function Name(props) {
   }
   return (
     <div
-      className={`team-box__name team-box__name--${props.name.toLowerCase()}`}
+      className={
+        `team-box__name team-box__name--${props.city.abbv.toLowerCase()}`
+      }
     >
       <h2 className="team-box__name-inner-container">
         {displayedText}

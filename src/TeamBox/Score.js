@@ -11,11 +11,11 @@ import { Team, ScoreValue } from "../utils/types";
 // }
 
 export default class Score extends React.Component {
-  constructor({ name, value }) {
+  constructor({ city, value }) {
     super();
-    this.name = name;
     this.value = value;
     this.state = {
+      city: city,
       animationClass: "",
       score: this.value
     };
@@ -50,7 +50,7 @@ export default class Score extends React.Component {
     return (
       <div
         className={
-          `team-box__score team-box__score--${this.name.toLowerCase()}`
+          `team-box__score team-box__score--${this.props.city.abbv.toLowerCase()}`
         }
       >
         <span

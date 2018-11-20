@@ -1,7 +1,7 @@
 
 // Team stuff
-@function getTeam($team-name)
-	@return map-get($TEAM-THEMES,$team-name)
+@function getTeam($team-abbv)
+	@return map-get($TEAM-THEMES,$team-abbv)
 
 @function getBgColor($theme)
 	@return map-get($theme,map-get($theme,"bgColor"))

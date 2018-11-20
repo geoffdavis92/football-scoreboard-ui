@@ -10,9 +10,9 @@ $theme: ''
 	line-height: 1
 	padding: 1rem 1.5rem
 	width: calc(75% - 3rem)
-	@each $team-name in $TEAMS
-		$theme: getTeam($team-name)
-		&--#{$team-name}
+	@each $team-abbv in $TEAMS
+		$theme: getTeam($team-abbv)
+		&--#{$team-abbv}
 			background-color: getBgColor($theme)
 			color: getTxtColor($theme)
 .team-box__name-inner-container
@@ -29,9 +29,9 @@ $theme: ''
 	padding: 1rem
 	text-align: center
 	width: calc(25% - 2rem)	
-	@each $team-name in $TEAMS
-		$theme: getTeam($team-name)
-		&--#{$team-name}
+	@each $team-abbv in $TEAMS
+		$theme: getTeam($team-abbv)
+		&--#{$team-abbv}
 			background-color: darken(getBgColor($theme),7.5)
 			color: getTxtColor($theme)
 .team-box__bottom-bar

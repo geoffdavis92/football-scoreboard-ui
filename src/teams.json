@@ -1,0 +1,266 @@
+{
+  "ari": {
+    "name": "Cardinals",
+    "colors": {
+      "primary": "#97233F",
+      "secondary": "#000000",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "atl": {
+    "name": "Falcons",
+    "colors": {
+      "primary": "#A71930",
+      "secondary": "#000000",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "bal": {
+    "name": "Ravens",
+    "colors": {
+      "primary": "#241773",
+      "secondary": "#9E7C0C",
+      "tertiary": "#000000"
+    }
+  },
+  "buf": {
+    "name": "Bills",
+    "colors": {
+      "primary": "#00338D",
+      "secondary": "#C60C30",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "car": {
+    "name": "Panthers",
+    "colors": {
+      "primary": "#0085CA",
+      "secondary": "#000000",
+      "tertiary": "#BFC0BF"
+    }
+  },
+  "chi": {
+    "name": "Bears",
+    "colors": {
+      "primary": "#0B162A",
+      "secondary": "#C83803",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "cin": {
+    "name": "Bengals",
+    "colors": {
+      "primary": "#FB4F14",
+      "secondary": "#000000",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "cle": {
+    "name": "Browns",
+    "colors": {
+      "primary": "#FF3C00",
+      "secondary": "#311D00",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "dal": {
+    "name": "Cowboys",
+    "colors": {
+      "primary": "#002244",
+      "secondary": "#B0B7BC",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "den": {
+    "name": "Broncos",
+    "colors": {
+      "primary": "#002244",
+      "secondary": "#FB4F14",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "det": {
+    "name": "Lions",
+    "colors": {
+      "primary": "#0076B6",
+      "secondary": "#B0B7BC",
+      "tertiary": "#000000"
+    }
+  },
+  "gb": {
+    "name": "Packers",
+    "colors": {
+      "primary": "#203731",
+      "secondary": "#FFB612",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "hou": {
+    "name": "Texans",
+    "colors": {
+      "primary": "#03202F",
+      "secondary": "#A71930",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "ind": {
+    "name": "Colts",
+    "colors": {
+      "primary": "#002C5F",
+      "secondary": "#FFFFFF",
+      "tertiary": "#A5ACAF"
+    }
+  },
+  "jax": {
+    "name": "Jaguars",
+    "colors": {
+      "primary": "#9F792C",
+      "secondary": "#000000",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "kc": {
+    "name": "Chiefs",
+    "colors": {
+      "primary": "#E31837",
+      "secondary": "#FFB612",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "la": {
+    "name": "Rams",
+    "colors": {
+      "primary": "#002244",
+      "secondary": "#B3995D",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "lac": {
+    "name": "Chargers",
+    "colors": {
+      "primary": "#002A5E",
+      "secondary": "#0080C6",
+      "tertiary": "#FFC20E"
+    }
+  },
+  "mia": {
+    "name": "Dolphins",
+    "colors": {
+      "primary": "#008E97",
+      "secondary": "#F58220",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "min": {
+    "name": "Vikings",
+    "colors": {
+      "primary": "#4F2683",
+      "secondary": "#FFC62F",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "ne": {
+    "name": "Patriots",
+    "colors": {
+      "primary": "#002244",
+      "secondary": "#C60C30",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "no": {
+    "name": "Saints",
+    "colors": {
+      "primary": "#D3BC8D",
+      "secondary": "#000000",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "nyg": {
+    "name": "Giants",
+    "colors": {
+      "primary": "#0B2265",
+      "secondary": "#A71930",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "nyj": {
+    "name": "Jets",
+    "colors": {
+      "primary": "#003F2D",
+      "secondary": "#FFFFFF",
+      "tertiary": "#B1B3B6"
+    }
+  },
+  "oak": {
+    "name": "Raiders",
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#A5ACAF",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "phi": {
+    "name": "Eagles",
+    "colors": {
+      "primary": "#004C54",
+      "secondary": "#A5ACAF",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "pit": {
+    "name": "Steelers",
+    "colors": {
+      "primary": "#000000",
+      "secondary": "#FFB612",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "sd": {
+    "name": "_chargers",
+    "colors": {
+      "primary": "#002A5E",
+      "secondary": "#0080C6",
+      "tertiary": "#FFC20E"
+    }
+  },
+  "sea": {
+    "name": "Seahawks",
+    "colors": {
+      "primary": "#002244",
+      "secondary": "#A5ACAF",
+      "tertiary": "#69BE28"
+    }
+  },
+  "sf": {
+    "name": "Forty-Niners",
+    "colors": {
+      "primary": "#AA0000",
+      "secondary": "#B3995D",
+      "tertiary": "#FFFFFF"
+    }
+  },
+  "tb": {
+    "name": "Buccaneers",
+    "colors": {
+      "primary": "#D50A0A",
+      "secondary": "#34302B",
+      "tertiary": "#000000"
+    }
+  },
+  "ten": {
+    "name": "Titans",
+    "colors": {
+      "primary": "#002244",
+      "secondary": "#4B92DB",
+      "tertiary": "#C60C30"
+    }
+  },
+  "was": {
+    "name": "Redskins",
+    "colors": {
+      "primary": "#5A1414",
+      "secondary": "#FFB612",
+      "tertiary": "#FFFFFF"
+    }
+  }
+}
