@@ -1,5 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {
+  faFootballBall as footballIcon,
+  faAlarmClock as alarmClockIcon
+} from "@fortawesome/pro-solid-svg-icons";
+import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import Container from "./Container";
 import TeamBox from "./TeamBox";
 import ClockBox from "./ClockBox";
@@ -46,55 +51,26 @@ const TEAMS = {
   BUCCANEERS: { city: { abbv: "TB" }, name: "Buccaneers" },
   TITANS: { city: { abbv: "TEN" }, name: "Titans" },
   REDSKINS: { city: { abbv: "WAS" }, name: "Redskins" }
-  // BEARS: {
-  //   city: {
-  //     abbv: "CHI",
-  //     full: "Chicago"
-  //   },
-  //   name: "Bears",
-  //   record: {
-  //     wins: 4,
-  //     losses: 1
-  //   }
-  // },
-  // PATRIOTS: {
-  //   city: {
-  //     abbv: "NE",
-  //     full: "New England"
-  //   },
-  //   name: "Patriots",
-  //   record: {
-  //     wins: 3,
-  //     losses: 2
-  //   }
-  // },
-  // SAINTS: {
-  //   city: {
-  //     abbv: "NO",
-  //     full: "New Orleans"
-  //   },
-  //   name: "Saints",
-  //   record: {
-  //     wins: 3,
-  //     losses: 2
-  //   }
-  // },
-  // STEELERS: {
-  //   city: {
-  //     abbv: "PIT",
-  //     full: "Pittsburgh"
-  //   },
-  //   name: "Steelers",
-  //   record: {
-  //     wins: 4,
-  //     losses: 3
-  //   }
-  // }
 };
+
+const SCORES = {
+  TOUCHDOWN: 6,
+  PAT: 1,
+  TWO_POINT_CONVERSION: 2,
+  FIELD_GOAL: 3,
+  SAFETY: 2
+};
+
 const scoreInput = {
   team1: React.createRef(),
   team2: React.createRef()
 };
+
+const Icon = props => (
+  <span className={`icon icon--${props.name}`}>
+    <FA icon={props.icon} />
+  </span>
+);
 
 class App extends React.Component {
   constructor({ team1, team2 }) {
@@ -114,6 +90,46 @@ class App extends React.Component {
       }
     };
   }
+  swapTeams = () => {
+    this.setState(
+      prevState => {
+        return {
+          ...prevState,
+          team1: prevState.team2,
+          team2: prevState.team1,
+          hasPossession: prevState.hasPossession === "team1"
+            ? "team2"
+            : "team1",
+          score: {
+            team1: prevState.score.team2,
+            team2: prevState.score.team1
+          },
+          timeoutsRemaining: {
+            team1: prevState.timeoutsRemaining.team2,
+            team2: prevState.timeoutsRemaining.team1
+          }
+        };
+      },
+      () => {
+        REFS.team1.current.value = this.state.team1.name.toUpperCase();
+        REFS.team2.current.value = this.state.team2.name.toUpperCase();
+      }
+    );
+  };
+  updateScore = (teamKey, scoreType, updateType = "ADD") => {
+    const modifier = updateType === "ADD" ? 1 : -1;
+    return () =>
+      this.setState(prevState => {
+        const newScore = prevState.score[teamKey] +
+          SCORES[scoreType] * modifier;
+        return {
+          score: {
+            ...prevState.score,
+            [teamKey]: newScore > 0 ? newScore : 0
+          }
+        };
+      });
+  };
   render() {
     return (
       <React.Fragment>
@@ -127,6 +143,7 @@ class App extends React.Component {
               this.state[this.state.hasPossession].name ===
                 this.state.team1.name
             }
+            isAwayTeam={true}
           />
           <TeamBox
             team={this.state.team2}
@@ -143,63 +160,87 @@ class App extends React.Component {
         </Container>
         <br /><br />
         <div className="control-box">
-          {["team1", "team2"].map(key => (
-            <section>
-              <div>
-                <select
-                  ref={REFS[key]}
-                  defaultValue={this.state[key].name.toUpperCase()}
-                  onChange={e => {
-                    this.setState(() => {
-                      console.log(TEAMS[REFS[key].current.value]);
-                      return {
+          {["team1", "team2"].map(key => {
+            return (
+              <section>
+                <div>
+                  <select
+                    ref={REFS[key]}
+                    defaultValue={this.state[key].name.toUpperCase()}
+                    onChange={e => {
+                      this.setState(() => ({
                         [key]: TEAMS[REFS[key].current.value]
-                      };
-                    });
-                  }}
-                >
-                  {Object.entries(TEAMS).map(([teamId, teamData]) => (
-                    <option key={teamId} value={teamId}>
-                      {teamData.name}
-                    </option>
-                  ))}
-                </select>
-                {" "}
+                      }));
+                    }}
+                  >
+                    {Object.entries(TEAMS).sort().map(([teamId, teamData]) => {
+                      const compareToKey = key === "team1" ? "team2" : "team1";
+                      return teamId !==
+                        this.state[compareToKey].name.toUpperCase() &&
+                        <option key={teamId} value={teamId}>
+                          {teamData.name}
+                        </option>;
+                    })}
+                  </select>
+                  {" "}
+                  <button
+                    className="control-box__button"
+                    onClick={() =>
+                      this.setState(() => ({
+                        hasPossession: key
+                      }))}
+                  >
+                    Give possession <Icon name="football" icon={footballIcon} />
+                  </button>
+                </div>
+                <hr />
                 <button
-                  onClick={() =>
-                    this.setState(() => ({
-                      hasPossession: key
+                  className={
+                    `control-box__button control-box__button--subtract`
+                  }
+                  onClick={e =>
+                    this.state.timeoutsRemaining[key] > 0 &&
+                    this.setState(prevState => ({
+                      timeoutsRemaining: {
+                        ...prevState.timeoutsRemaining,
+                        [key]: prevState.timeoutsRemaining[key] - 1
+                      }
                     }))}
                 >
-                  Give possession
+                  Use Timeout <Icon name="clock" icon={alarmClockIcon} />
                 </button>
-              </div>
-              <button
-                onClick={() =>
-                  this.state.timeoutsRemaining[key] < 3 &&
-                  this.setState(prevState => ({
-                    timeoutsRemaining: {
-                      ...prevState.timeoutsRemaining,
-                      [key]: prevState.timeoutsRemaining[key] + 1
-                    }
-                  }))}
-              >
-                Add Timeout
-              </button>
-              <button
-                onClick={e =>
-                  this.state.timeoutsRemaining[key] > 0 &&
-                  this.setState(prevState => ({
-                    timeoutsRemaining: {
-                      ...prevState.timeoutsRemaining,
-                      [key]: prevState.timeoutsRemaining[key] - 1
-                    }
-                  }))}
-              >
-                Use Timeout
-              </button>
-              <br />
-              <input
+                <button
+                  className={`control-box__button control-box__button--add`}
+                  onClick={() =>
+                    this.state.timeoutsRemaining[key] < 3 &&
+                    this.setState(prevState => ({
+                      timeoutsRemaining: {
+                        ...prevState.timeoutsRemaining,
+                        [key]: prevState.timeoutsRemaining[key] + 1
+                      }
+                    }))}
+                >
+                  Add Timeout <Icon name="clock" icon={alarmClockIcon} />
+                </button>
+                <hr />
+                <React.Fragment>
+                  {["ADD", "SUBTRACT"].map(action =>
+                    Object.entries(SCORES).map(([scoreTypeKey]) => (
+                      <button
+                        className={
+                          `control-box__button control-box__button--${action.toLowerCase()}`
+                        }
+                        onClick={this.updateScore(key, scoreTypeKey, action)}
+                      >
+                        {
+                          `${action} ${scoreTypeKey
+                            .replace(/\_/g, " ")
+                            .toLowerCase()}`
+                        }
+                      </button>
+                    )))}
+                </React.Fragment>
+                {/*<input
                 ref={scoreInput[key]}
                 placeholder="Score"
                 type="text"
@@ -214,9 +255,10 @@ class App extends React.Component {
                     }
                   }));
                 }}
-              />
-            </section>
-          ))}
+              />*/}
+              </section>
+            );
+          })}
         </div>
       </React.Fragment>
     );
@@ -226,6 +268,6 @@ class App extends React.Component {
 window.TEAMS = TEAMS;
 
 ReactDOM.render(
-  <App team1={TEAMS.STEELERS} team2={TEAMS.PATRIOTS} />,
+  <App team1={TEAMS.BEARS} team2={TEAMS.LIONS} />,
   document.getElementById("root")
 );
