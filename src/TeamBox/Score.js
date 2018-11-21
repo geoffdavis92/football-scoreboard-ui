@@ -50,7 +50,7 @@ export default class Score extends React.Component {
     return (
       <div
         className={
-          `team-box__score team-box__score--${this.props.city.abbv.toLowerCase()}`
+          `team-box__score team-box__score--${this.props.city.abbv.toLowerCase()}${this.props.isAwayTeam ? `--away` : ""}`
         }
       >
         <span

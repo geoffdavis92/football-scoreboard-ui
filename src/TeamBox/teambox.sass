@@ -14,7 +14,10 @@ $theme: ''
 		$theme: getTeam($team-abbv)
 		&--#{$team-abbv}
 			background-color: getBgColor($theme)
-			color: getTxtColor($theme)
+			color: #fff //getTxtColor($theme)
+		&--#{$team-abbv}--away
+			background-color: getAwayBgColor($theme)
+			color: #fff
 .team-box__name-inner-container
 	display: flex
 	font-size: inherit
@@ -33,7 +36,10 @@ $theme: ''
 		$theme: getTeam($team-abbv)
 		&--#{$team-abbv}
 			background-color: darken(getBgColor($theme),7.5)
-			color: getTxtColor($theme)
+			color: #fff //getTxtColor($theme)
+		&--#{$team-abbv}--away
+			background-color: darken(getAwayBgColor($theme), 7.5)
+			color: #fff
 .team-box__bottom-bar
 	display: block
 	height: .5rem

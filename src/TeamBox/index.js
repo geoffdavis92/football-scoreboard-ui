@@ -13,7 +13,8 @@ export default class TeamBox extends React.Component {
       showRecord,
       score,
       timeoutsRemaining,
-      hasPossession
+      hasPossession,
+      isAwayTeam
     } = this.props;
     const { city, name, record } = team;
     return (
@@ -24,8 +25,9 @@ export default class TeamBox extends React.Component {
           record={record}
           showRecord={showRecord}
           style="name"
+          isAwayTeam={isAwayTeam}
         />
-        <Score city={city} value={score} />
+        <Score city={city} value={score} isAwayTeam={isAwayTeam} />
         <div className="team-box__bottom-bar">
           <Timeouts remaining={timeoutsRemaining} />
           <div
