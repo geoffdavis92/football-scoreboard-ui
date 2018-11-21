@@ -6,6 +6,9 @@
 @function getBgColor($theme)
 	@return map-get($theme,map-get($theme,"bgColor"))
 
+@function getAwayBgColor($theme)
+	@return map-get($theme,map-get($theme, "awayBgColor"))
+
 // @function getDarkBgColor($theme)
 // 	@return darken(map-get($theme,map-get($theme,"darkBgColor")),7.5)
 

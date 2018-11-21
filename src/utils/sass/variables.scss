@@ -13,28 +13,28 @@ $font-size: 20px;
 // $TEAM-THEMES: (
 //   "bears": (
 //     "bgColor": "pri",
-//     "txtColor": "ter",
+//     "awayBgColor": "sec",
 //     "pri": #0b162a,
 //     "sec": #c83803,
 //     "ter": white
 //   ),
 //   "patriots": (
 //     "bgColor": "pri",
-//     "txtColor": "ter",
+//     "awayBgColor": "sec",
 //     "pri": #024,
 //     "sec": #c60c30,
 //     "ter": #fff//silver
 //   ),
 //   "saints": (
 //     "bgColor": "pri",
-//     "txtColor": "ter",
+//     "awayBgColor": "sec",
 //     "pri": #d3bc8d,
 //     "sec": #333,
 //     "ter": white
 //   ),
 //   "steelers": (
 //     "bgColor": "sec",
-//     "txtColor": "ter",
+//     "awayBgColor": "sec",
 //     "pri": black,
 //     "sec": #ffb612,
 //     "ter": white
@@ -80,231 +80,231 @@ $TEAMS: (
 $TEAM-THEMES: (
   "ari": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #97233f,
     "sec": #000000,
     "ter": #ffffff
   ),
   "atl": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #a71930,
     "sec": #000000,
     "ter": #ffffff
   ),
   "bal": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "ter",
     "pri": #241773,
     "sec": #9e7c0c,
     "ter": #000000
   ),
   "buf": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #00338d,
     "sec": #c60c30,
     "ter": #ffffff
   ),
   "car": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #0085ca,
     "sec": #000000,
     "ter": #bfc0bf
   ),
   "chi": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #0b162a,
     "sec": #c83803,
     "ter": #ffffff
   ),
   "cin": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #fb4f14,
     "sec": #000000,
     "ter": #ffffff
   ),
   "cle": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #ff3c00,
     "sec": #311d00,
     "ter": #ffffff
   ),
   "dal": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #002244,
     "sec": #b0b7bc,
     "ter": #ffffff
   ),
   "den": (
-    "bgColor": "pri",
-    "txtColor": "ter",
+    "bgColor": "sec",
+    "awayBgColor": "pri",
     "pri": #002244,
     "sec": #fb4f14,
     "ter": #ffffff
   ),
   "det": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #0076b6,
     "sec": #b0b7bc,
     "ter": #000000
   ),
   "gb": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #203731,
     "sec": #ffb612,
     "ter": #ffffff
   ),
   "hou": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #03202f,
     "sec": #a71930,
     "ter": #ffffff
   ),
   "ind": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "ter",
     "pri": #002c5f,
     "sec": #ffffff,
     "ter": #a5acaf
   ),
   "jax": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #9f792c,
     "sec": #000000,
     "ter": #ffffff
   ),
   "kc": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #e31837,
     "sec": #ffb612,
     "ter": #ffffff
   ),
   "la": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #002244,
     "sec": #b3995d,
     "ter": #ffffff
   ),
   "lac": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #002a5e,
     "sec": #0080c6,
     "ter": #ffc20e
   ),
   "mia": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #008e97,
     "sec": #f58220,
     "ter": #ffffff
   ),
   "min": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #4f2683,
     "sec": #ffc62f,
     "ter": #ffffff
   ),
   "ne": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #002244,
     "sec": #c60c30,
     "ter": #ffffff
   ),
   "no": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #d3bc8d,
     "sec": #000000,
     "ter": #ffffff
   ),
   "nyg": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #0b2265,
     "sec": #a71930,
     "ter": #ffffff
   ),
   "nyj": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "ter",
     "pri": #003f2d,
     "sec": #ffffff,
     "ter": #b1b3b6
   ),
   "oak": (
-    "bgColor": "pri",
-    "txtColor": "ter",
+    "bgColor": "sec",
+    "awayBgColor": "sec",
     "pri": #000000,
     "sec": #a5acaf,
     "ter": #ffffff
   ),
   "phi": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #004c54,
     "sec": #a5acaf,
     "ter": #ffffff
   ),
   "pit": (
     "bgColor": "sec",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #000000,
     "sec": #ffb612,
     "ter": #ffffff
   ),
   "sd": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #002a5e,
     "sec": #0080c6,
     "ter": #ffc20e
   ),
   "sea": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "ter",
     "pri": #002244,
     "sec": #a5acaf,
     "ter": #69be28
   ),
   "sf": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #aa0000,
     "sec": #b3995d,
     "ter": #ffffff
   ),
   "tb": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "sec",
     "pri": #d50a0a,
     "sec": #34302b,
     "ter": #000000
   ),
   "ten": (
-    "bgColor": "pri",
-    "txtColor": "ter",
+    "bgColor": "sec",
+    "awayBgColor": "pri",
     "pri": #002244,
     "sec": #4b92db,
     "ter": #c60c30
   ),
   "was": (
     "bgColor": "pri",
-    "txtColor": "ter",
+    "awayBgColor": "pri",
     "pri": #5a1414,
     "sec": #ffb612,
     "ter": #ffffff
