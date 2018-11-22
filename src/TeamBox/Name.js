@@ -1,5 +1,6 @@
 import React from "react";
 import { Team } from "../utils/types";
+import LOGOS from "../logos.json";
 
 export default function Name(props) {
   let displayedText;
@@ -18,8 +19,13 @@ export default function Name(props) {
       className={
         `team-box__name team-box__name--${props.city.abbv.toLowerCase()}${props.isAwayTeam ? `--away` : ""}`
       }
+      style={props.showLogo ? LOGOS[props.city.abbv] : {}}
     >
-      <h2 className="team-box__name-inner-container">
+      <h2
+        className={
+          `team-box__name-inner-container${props.showLogo ? " team-box__name-inner-container--show-logo" : ""}`
+        }
+      >
         {displayedText}
         {props.showRecord &&
           props.record.wins &&

@@ -6,9 +6,14 @@ $theme: ''
 	font-weight: 500
 	width: 30%
 .team-box__name	
+	// background-size: auto 100
+	background-position: 2.5% 50%
+	background-repeat: no-repeat
+	background-size: auto 120%
 	display: inline-block
 	line-height: 1
 	padding: 1rem 1.5rem
+	transition: $global-transition-speed all
 	width: calc(75% - 3rem)
 	@each $team-abbv in $TEAMS
 		$theme: getTeam($team-abbv)
@@ -23,14 +28,15 @@ $theme: ''
 	font-size: inherit
 	justify-content: space-between
 	margin: 0
+	&--show-logo
+		position: relative
+		left: 25%
 .team-box__score
-	// align-items: center
-	// display: flex
-	// justify-content: center
 	display: inline-block
 	line-height: 1
 	padding: 1rem
 	text-align: center
+	transition: $global-transition-speed all
 	width: calc(25% - 2rem)	
 	@each $team-abbv in $TEAMS
 		$theme: getTeam($team-abbv)
@@ -56,7 +62,7 @@ $theme: ''
 		position: relative
 		margin: 0 2px
 		left: .5%
-		transition: .5s opacity
+		transition: $global-transition-speed opacity
 		&--show
 			opacity: 1
 		&--hide
@@ -68,7 +74,7 @@ $theme: ''
 		position: absolute
 		right: 0
 		top: 0
-		transition: .5s opacity
+		transition: $global-transition-speed opacity
 		width: 25%
 	.possession-indicator--hide
 		opacity: 0
@@ -76,7 +82,7 @@ $theme: ''
 .score
 	display: inline-block
 	transform: rotateY(0)
-	transition: .5s transform
+	transition: $global-transition-speed transform
 .score--rotate-half
 	transform: rotateY(-90deg)
 .score--rotate-full
