@@ -1,0 +1,107 @@
+{
+  "ARI": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/ARI.svg)"
+  },
+  "ATL": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/ATL.svg)"
+  },
+  "BAL": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/BAL.svg)"
+  },
+  "BUF": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/BUF.svg)"
+  },
+  "CAR": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/CAR.svg)"
+  },
+  "CHI": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/CHI.svg)"
+  },
+  "CIN": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/CIN.svg)"
+  },
+  "CLE": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/CLE.svg)"
+  },
+  "DAL": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/DAL.svg)",
+    "backgroundSize": "auto 100%",
+    "backgroundPosition": "5% 50%"
+  },
+  "DEN": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/DEN.svg)"
+  },
+  "DET": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/DET.svg)"
+  },
+  "GB": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/GB.svg)"
+  },
+  "HOU": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/HOU.svg)"
+  },
+  "IND": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/IND.svg)"
+  },
+  "JAX": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/JAX.svg)"
+  },
+  "KC": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/KC.svg)"
+  },
+  "LA": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/LA.svg)"
+  },
+  "LAC": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/LAC.svg)"
+  },
+  "MIA": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/MIA.svg)"
+  },
+  "MIN": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/MIN.svg)",
+    "backgroundSize": "auto 100%",
+    "backgroundPosition": "5% 50%"
+  },
+  "NE": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/NE.svg)"
+  },
+  "NO": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/NO.svg)"
+  },
+  "NYG": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/NYG.svg)"
+  },
+  "NYJ": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/NYJ.svg)"
+  },
+  "OAK": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/OAK.svg)"
+  },
+  "PHI": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/PHI.svg)"
+  },
+  "PIT": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/PIT.svg)"
+  },
+  "SD": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/SD.svg)"
+  },
+  "SEA": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/SEA.svg)"
+  },
+  "SF": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/SF.svg)"
+  },
+  "TB": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/TB.svg)"
+  },
+  "TEN": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/TEN.svg)"
+  },
+  "WAS": {
+    "backgroundImage": "url(https://nflcdns.nfl.com/static/site/img/logos/svg/teams/WAS.svg)",
+    "backgroundSize": "auto 90%",
+    "backgroundPosition": "8% 50%"
+  }
+}
