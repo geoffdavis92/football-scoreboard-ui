@@ -5,10 +5,17 @@ body
 	font-size: $font-size
 	+font-family("sans")
 
+.icon
+	display: inline-block
+	margin-left: .125rem
+	&--football
+		color: brown
+
 .control-box
 	display: flex
-	margin: auto
 	justify-content: flex-start
+	margin: auto
+	position: relative
 	width: 80%
 	section 
 		padding: 0 2.5%
@@ -23,14 +30,34 @@ body
 	font-size: .8rem
 	margin: .25rem
 	padding: .25rem .5rem
+	transition: $global-transition-speed background-color, $global-transition-speed color
+	.icon
+		transition: $global-transition-speed color
+	&:active
+		background-color: #eee
+	&:disabled
+		background-color: #efefef
+		color: #aaa
+		cursor: not-allowed
+		.icon
+			color: #aaa
 	&--add
-		background-color: #11cc33
-		border-color: #11cc33
+		background-color: $add
+		border-color: $add
 		color: #fff
+		&:active
+			background-color: darken($add,7.5)
 	&--subtract
-		background-color: #ee1133
-		border-color: #ee1133
+		background-color: $subtract
+		border-color: $subtract
 		color: #fff
-.icon
-	&--football
-		color: brown
+		&:active
+			background-color: darken($subtract,7.5)
+.control-box__swapper
+	position: absolute
+	bottom: -4rem
+	left: calc(25% - 10%)
+	text-align: center
+	button 
+		font-size: 1.5rem
+		padding: .5rem 1rem

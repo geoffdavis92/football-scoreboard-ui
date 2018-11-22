@@ -1,3 +1,5 @@
+$add: #11cc33;
+$subtract: #ee1133;
 $nfl-yellow: #ecc600;
 
 $font-families: (
@@ -9,37 +11,7 @@ $font-families: (
 );
 $font-size: 20px;
 
-// $TEAMS: ("bears", "patriots", "saints", "steelers");
-// $TEAM-THEMES: (
-//   "bears": (
-//     "bgColor": "pri",
-//     "awayBgColor": "sec",
-//     "pri": #0b162a,
-//     "sec": #c83803,
-//     "ter": white
-//   ),
-//   "patriots": (
-//     "bgColor": "pri",
-//     "awayBgColor": "sec",
-//     "pri": #024,
-//     "sec": #c60c30,
-//     "ter": #fff//silver
-//   ),
-//   "saints": (
-//     "bgColor": "pri",
-//     "awayBgColor": "sec",
-//     "pri": #d3bc8d,
-//     "sec": #333,
-//     "ter": white
-//   ),
-//   "steelers": (
-//     "bgColor": "sec",
-//     "awayBgColor": "sec",
-//     "pri": black,
-//     "sec": #ffb612,
-//     "ter": white
-//   )
-// );
+$global-transition-speed: 0.45s;
 
 $TEAMS: (
   "ari",
@@ -87,14 +59,14 @@ $TEAM-THEMES: (
   ),
   "atl": (
     "bgColor": "pri",
-    "awayBgColor": "pri",
+    "awayBgColor": "sec",
     "pri": #a71930,
     "sec": #000000,
     "ter": #ffffff
   ),
   "bal": (
     "bgColor": "pri",
-    "awayBgColor": "ter",
+    "awayBgColor": "pri",
     "pri": #241773,
     "sec": #9e7c0c,
     "ter": #000000
@@ -116,7 +88,7 @@ $TEAM-THEMES: (
   "chi": (
     "bgColor": "pri",
     "awayBgColor": "sec",
-    "pri": #0b162a,
+    "pri": lighten(#0b162a, 5),
     "sec": #c83803,
     "ter": #ffffff
   ),
@@ -177,10 +149,10 @@ $TEAM-THEMES: (
     "ter": #a5acaf
   ),
   "jax": (
-    "bgColor": "pri",
-    "awayBgColor": "sec",
+    "bgColor": "sec",
+    "awayBgColor": "pri",
     "pri": #9f792c,
-    "sec": #000000,
+    "sec": #006778,
     "ter": #ffffff
   ),
   "kc": (
@@ -241,13 +213,13 @@ $TEAM-THEMES: (
   ),
   "nyj": (
     "bgColor": "pri",
-    "awayBgColor": "ter",
+    "awayBgColor": "pri",
     "pri": #003f2d,
     "sec": #ffffff,
     "ter": #b1b3b6
   ),
   "oak": (
-    "bgColor": "sec",
+    "bgColor": "pri",
     "awayBgColor": "sec",
     "pri": #000000,
     "sec": #a5acaf,
