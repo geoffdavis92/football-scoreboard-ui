@@ -4,6 +4,9 @@ import {
   faFootballBall as footballIcon,
   faAlarmClock as alarmClockIcon
 } from "@fortawesome/pro-solid-svg-icons";
+import {
+  faExchangeAlt as exchangeIcon
+} from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon as FA } from "@fortawesome/react-fontawesome";
 import Container from "./Container";
 import TeamBox from "./TeamBox";
@@ -78,7 +81,8 @@ class App extends React.Component {
     this.state = {
       team1: team1,
       team2: team2,
-      hasPossession: "team1",
+      hasPossession: "team2",
+      showLogos: true,
       showTeamRecords: true,
       score: {
         team1: 0,
@@ -143,6 +147,7 @@ class App extends React.Component {
               this.state[this.state.hasPossession].name ===
                 this.state.team1.name
             }
+            showLogo={this.state.showLogos}
             isAwayTeam={true}
           />
           <TeamBox
@@ -154,6 +159,7 @@ class App extends React.Component {
               this.state[this.state.hasPossession].name ===
                 this.state.team2.name
             }
+            showLogo={this.state.showLogos}
           />
           <ClockBox />
           <DriveBox />
@@ -185,6 +191,7 @@ class App extends React.Component {
                   {" "}
                   <button
                     className="control-box__button"
+                    disabled={this.state.hasPossession === key}
                     onClick={() =>
                       this.setState(() => ({
                         hasPossession: key
@@ -240,25 +247,14 @@ class App extends React.Component {
                       </button>
                     )))}
                 </React.Fragment>
-                {/*<input
-                ref={scoreInput[key]}
-                placeholder="Score"
-                type="text"
-                onChange={e => {
-                  const teamScore = scoreInput[key].current.value.length
-                    ? parseInt(scoreInput[key].current.value)
-                    : this.state.score[key];
-                  this.setState(prevState => ({
-                    score: {
-                      ...prevState.score,
-                      [key]: teamScore
-                    }
-                  }));
-                }}
-              />*/}
               </section>
             );
           })}
+          <section className="control-box__swapper">
+            <button className="control-box__button" onClick={this.swapTeams}>
+              Swap Teams <Icon name="swap" icon={exchangeIcon} />
+            </button>
+          </section>
         </div>
       </React.Fragment>
     );
